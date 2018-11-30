@@ -12,14 +12,17 @@
 		7863D0D721A4E56600EB5B35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7863D0D521A4E56600EB5B35 /* Main.storyboard */; };
 		7863D0D921A4E56900EB5B35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7863D0D821A4E56900EB5B35 /* Assets.xcassets */; };
 		7863D0DC21A4E56900EB5B35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7863D0DA21A4E56900EB5B35 /* LaunchScreen.storyboard */; };
+		78BBD98C21B1DC72003D3523 /* LivroUiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BBD98B21B1DC72003D3523 /* LivroUiTableViewCell.swift */; };
 		CC9D6B6221AB2E4400BAACCA /* CadastraLivroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9D6B6121AB2E4400BAACCA /* CadastraLivroViewController.swift */; };
 		CC9D6B6421AB2EAF00BAACCA /* DetalhaLivroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9D6B6321AB2EAF00BAACCA /* DetalhaLivroViewController.swift */; };
 		CC9D6B6621AB2ED500BAACCA /* ListaLivrosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9D6B6521AB2ED500BAACCA /* ListaLivrosTableViewController.swift */; };
 		CC9D6B6821AB30E600BAACCA /* Livro.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9D6B6721AB30E600BAACCA /* Livro.swift */; };
 		CC9D6B6A21AB334D00BAACCA /* LivrosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9D6B6921AB334D00BAACCA /* LivrosController.swift */; };
+		E7C485ADBA88685849E74E02 /* Pods_Trabalho_FInal_iOS_3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5FB466808B1F18755E0B23 /* Pods_Trabalho_FInal_iOS_3.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0683BD7C73B029EBED8C8372 /* Pods-Trabalho FInal iOS 3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trabalho FInal iOS 3.release.xcconfig"; path = "Pods/Target Support Files/Pods-Trabalho FInal iOS 3/Pods-Trabalho FInal iOS 3.release.xcconfig"; sourceTree = "<group>"; };
 		7863D0CE21A4E56600EB5B35 /* Trabalho FInal iOS 3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trabalho FInal iOS 3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7863D0D121A4E56600EB5B35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7863D0D321A4E56600EB5B35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,6 +30,9 @@
 		7863D0D821A4E56900EB5B35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7863D0DB21A4E56900EB5B35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7863D0DD21A4E56900EB5B35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78BBD98B21B1DC72003D3523 /* LivroUiTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivroUiTableViewCell.swift; sourceTree = "<group>"; };
+		B8276E13EA9A25CD503FB162 /* Pods-Trabalho FInal iOS 3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trabalho FInal iOS 3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Trabalho FInal iOS 3/Pods-Trabalho FInal iOS 3.debug.xcconfig"; sourceTree = "<group>"; };
+		BC5FB466808B1F18755E0B23 /* Pods_Trabalho_FInal_iOS_3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trabalho_FInal_iOS_3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC9D6B6121AB2E4400BAACCA /* CadastraLivroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastraLivroViewController.swift; sourceTree = "<group>"; };
 		CC9D6B6321AB2EAF00BAACCA /* DetalhaLivroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhaLivroViewController.swift; sourceTree = "<group>"; };
 		CC9D6B6521AB2ED500BAACCA /* ListaLivrosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaLivrosTableViewController.swift; sourceTree = "<group>"; };
@@ -39,17 +45,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7C485ADBA88685849E74E02 /* Pods_Trabalho_FInal_iOS_3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17666F4A469AA44D2EA548A4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B8276E13EA9A25CD503FB162 /* Pods-Trabalho FInal iOS 3.debug.xcconfig */,
+				0683BD7C73B029EBED8C8372 /* Pods-Trabalho FInal iOS 3.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7863D0C521A4E56600EB5B35 = {
 			isa = PBXGroup;
 			children = (
 				7863D0D021A4E56600EB5B35 /* Trabalho FInal iOS 3 */,
 				7863D0CF21A4E56600EB5B35 /* Products */,
+				17666F4A469AA44D2EA548A4 /* Pods */,
+				FB763D003A2B52FCCE5458D5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,9 +95,18 @@
 			path = "Trabalho FInal iOS 3";
 			sourceTree = "<group>";
 		};
+		78BBD98A21B1DC30003D3523 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				78BBD98B21B1DC72003D3523 /* LivroUiTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		CC9D6B5E21AB2AE200BAACCA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				78BBD98A21B1DC30003D3523 /* Cell */,
 				CC9D6B6121AB2E4400BAACCA /* CadastraLivroViewController.swift */,
 				CC9D6B6321AB2EAF00BAACCA /* DetalhaLivroViewController.swift */,
 				CC9D6B6521AB2ED500BAACCA /* ListaLivrosTableViewController.swift */,
@@ -103,6 +130,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		FB763D003A2B52FCCE5458D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC5FB466808B1F18755E0B23 /* Pods_Trabalho_FInal_iOS_3.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -110,9 +145,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7863D0E021A4E56900EB5B35 /* Build configuration list for PBXNativeTarget "Trabalho FInal iOS 3" */;
 			buildPhases = (
+				3506F53703A97EE6293A6353 /* [CP] Check Pods Manifest.lock */,
 				7863D0CA21A4E56600EB5B35 /* Sources */,
 				7863D0CB21A4E56600EB5B35 /* Frameworks */,
 				7863D0CC21A4E56600EB5B35 /* Resources */,
+				77B2C58CC293C9D56FB12EAE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -169,6 +206,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3506F53703A97EE6293A6353 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Trabalho FInal iOS 3-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77B2C58CC293C9D56FB12EAE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Trabalho FInal iOS 3/Pods-Trabalho FInal iOS 3-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Trabalho FInal iOS 3/Pods-Trabalho FInal iOS 3-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7863D0CA21A4E56600EB5B35 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -176,6 +252,7 @@
 			files = (
 				CC9D6B6A21AB334D00BAACCA /* LivrosController.swift in Sources */,
 				CC9D6B6821AB30E600BAACCA /* Livro.swift in Sources */,
+				78BBD98C21B1DC72003D3523 /* LivroUiTableViewCell.swift in Sources */,
 				7863D0D421A4E56600EB5B35 /* ViewController.swift in Sources */,
 				CC9D6B6621AB2ED500BAACCA /* ListaLivrosTableViewController.swift in Sources */,
 				CC9D6B6221AB2E4400BAACCA /* CadastraLivroViewController.swift in Sources */,
@@ -324,6 +401,7 @@
 		};
 		7863D0E121A4E56900EB5B35 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8276E13EA9A25CD503FB162 /* Pods-Trabalho FInal iOS 3.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -342,6 +420,7 @@
 		};
 		7863D0E221A4E56900EB5B35 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0683BD7C73B029EBED8C8372 /* Pods-Trabalho FInal iOS 3.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

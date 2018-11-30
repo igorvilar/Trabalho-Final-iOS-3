@@ -10,6 +10,10 @@ import UIKit
 
 class ListaLivrosTableViewController: UITableViewController {
 
+    var livrosController = LivrosController()
+    
+    var listaLivros : Array<Livro> = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,29 +22,41 @@ class ListaLivrosTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+
+        
+        livrosController.buscarLivros(completion: {(livros) -> Void in
+            if(livros != nil){
+                self.listaLivros = livros!
+                self.tableView.reloadData()
+            }
+            
+        })
+        
+        
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return listaLivros.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LivroUiTableViewCell", for: indexPath) as! LivroUiTableViewCell
+        
+        cell.tag = indexPath.row
+        cell.lblNomeLivro.text = listaLivros[indexPath.row].nome
+        
         return cell
     }
-    */
+ 
 
     /*
     // Override to support conditional editing of the table view.
@@ -77,14 +93,20 @@ class ListaLivrosTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "detalheLivroSegue" {
+            let cell = sender as! UITableViewCell
+            let destinationVC = segue.destination as! DetalhaLivroViewController
+            destinationVC.livro = listaLivros[cell.tag]
+        }
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
+ 
 
 }

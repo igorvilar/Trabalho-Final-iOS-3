@@ -18,20 +18,32 @@ class CadastraLivroViewController: UIViewController {
     @IBOutlet weak var btnSalvar: UIButton!
     
     @IBAction func cadastrarLivro(_ sender: UIButton) {
+        if nomeTextField.text == "" || autorTextField.text == "" || anoTextField.text == ""{
+            mostrarAlerta(title: "Alerta" , message: "Necessário preencher todos os campos!")
+            return
+        }
         let livro = Livro()
         
         livro.nome = nomeTextField.text!
         livro.autor = autorTextField.text!
         livro.ano = anoTextField.text!
         
-        let isSaved = controller.salvarLivro()
-        
-        if(isSaved){
-            fecharCadastro()
-        }
+        controller.salvarLivro(livro: livro,completion: {(sucesso) -> Void in
+            if sucesso == true{
+                self.fecharCadastro()
+            }
+            
+        })
     }
     
     func fecharCadastro(){
         // FECHAR FORMULÁRIO DE CADASTRO
+        self.performSegue(withIdentifier: "", sender: nil)
+    }
+    
+    func mostrarAlerta(title: String, message: String) {
+        let alertaGuia = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertaGuia.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alertaGuia, animated: true, completion: nil)
     }
 }

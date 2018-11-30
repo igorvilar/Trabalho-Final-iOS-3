@@ -12,4 +12,14 @@ class Livro {
     var nome: String = ""
     var autor: String = ""
     var ano: String = ""
+    
+    init(nome : String, autor: String, ano: String) {
+        self.nome = nome
+        self.autor = autor
+        self.ano = ano
+    }
+    
+    init(){
+        
+    }
 }

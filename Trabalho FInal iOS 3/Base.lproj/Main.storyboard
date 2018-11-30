@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UUk-hc-cQk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eNR-xF-WCw">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,9 +23,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52" y="-102"/>
+            <point key="canvasLocation" x="-476" y="-504"/>
         </scene>
-        <!--Cadastra Livro View Controller-->
+        <!--Salvar Livro-->
         <scene sceneID="6IL-Pb-3AT">
             <objects>
                 <viewController id="UUk-hc-cQk" customClass="CadastraLivroViewController" customModule="Trabalho_FInal_iOS_3" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,13 +33,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nome" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hU6-6O-xCu">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hU6-6O-xCu">
                                 <rect key="frame" x="45" y="118" width="285" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Autor" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="27b-sH-GY8">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Autor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="27b-sH-GY8">
                                 <rect key="frame" x="45" y="174" width="285" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -62,11 +62,11 @@
                                     <action selector="cadastrarLivro:" destination="UUk-hc-cQk" eventType="touchUpInside" id="bdu-tR-Tez"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ano" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EoI-d2-QHC">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ano" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EoI-d2-QHC">
                                 <rect key="frame" x="45" y="240" width="285" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -89,18 +89,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="atN-Mz-kNc"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Salvar Livro" id="ash-Fr-yKv"/>
                     <connections>
                         <outlet property="anoTextField" destination="EoI-d2-QHC" id="vMC-EK-9bN"/>
                         <outlet property="autorTextField" destination="27b-sH-GY8" id="rJ2-vz-p8W"/>
                         <outlet property="btnSalvar" destination="V0S-1q-i4A" id="ybH-kv-CKZ"/>
                         <outlet property="nomeTextField" destination="hU6-6O-xCu" id="A66-eU-GvU"/>
+                        <segue destination="9o8-Db-gRk" kind="show" id="u6n-g5-ZsC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tDd-Z4-Fhu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="972" y="-280.20989505247377"/>
+            <point key="canvasLocation" x="1959" y="-280"/>
         </scene>
-        <!--Lista Livros Table View Controller-->
+        <!--Livros-->
         <scene sceneID="FYC-cw-N1r">
             <objects>
                 <tableViewController id="rcc-dn-ApV" customClass="ListaLivrosTableViewController" customModule="Trabalho_FInal_iOS_3" customModuleProvider="target" sceneMemberID="viewController">
@@ -109,29 +111,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="1gM-2O-3mS" detailTextLabel="eRR-wH-xU0" rowHeight="64" style="IBUITableViewCellStyleSubtitle" id="c43-Rm-fw7">
-                                <rect key="frame" x="0.0" y="28" width="375" height="64"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LivroUiTableViewCell" rowHeight="70" id="c43-Rm-fw7" customClass="LivroUiTableViewCell" customModule="Trabalho_FInal_iOS_3" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="c43-Rm-fw7" id="xZN-Xy-YwT">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="63.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="I" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="c43-Rm-fw7" id="xZN-Xy-YwT">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1gM-2O-3mS">
-                                            <rect key="frame" x="16" y="12" width="33.5" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="lblNomeLivro" text="---Livro Default---" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cn9-jq-8bd">
+                                            <rect key="frame" x="16" y="24.5" width="343" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eRR-wH-xU0">
-                                            <rect key="frame" x="16" y="35.5" width="33" height="14.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="cn9-jq-8bd" firstAttribute="leading" secondItem="xZN-Xy-YwT" secondAttribute="leadingMargin" id="DfM-tL-L8D"/>
+                                        <constraint firstItem="cn9-jq-8bd" firstAttribute="trailing" secondItem="xZN-Xy-YwT" secondAttribute="trailingMargin" id="Wju-vW-lpX"/>
+                                        <constraint firstItem="cn9-jq-8bd" firstAttribute="centerY" secondItem="xZN-Xy-YwT" secondAttribute="centerY" id="ytb-e3-o4v"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lblNomeLivro" destination="cn9-jq-8bd" id="sVr-ju-mSU"/>
+                                    <segue destination="9o8-Db-gRk" kind="show" identifier="detalheLivroSegue" id="BeR-ZR-dKE"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -139,10 +142,11 @@
                             <outlet property="delegate" destination="rcc-dn-ApV" id="Cyj-0S-5oI"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Livros" id="PD3-L7-14l"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0qs-bz-C0I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="975.20000000000005" y="457.42128935532236"/>
+            <point key="canvasLocation" x="1914.4000000000001" y="457.42128935532236"/>
         </scene>
         <!--Detalha Livro View Controller-->
         <scene sceneID="RPY-Ta-qRG">
@@ -165,6 +169,9 @@
                                 <state key="normal" title="Voltar">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="voltarButton:" destination="9o8-Db-gRk" eventType="touchUpInside" id="9zn-ku-67o"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome do Livro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ps-aN-DGR">
                                 <rect key="frame" x="45" y="123" width="284" height="21"/>
@@ -205,10 +212,37 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ovc-Hx-dd6"/>
                     </view>
+                    <connections>
+                        <outlet property="anoLivroLbl" destination="5AJ-Yf-Zd2" id="swi-yb-DpJ"/>
+                        <outlet property="autorLivroLbl" destination="Gom-CJ-OxY" id="m1L-Ks-idS"/>
+                        <outlet property="nomeLivroLbl" destination="6Ps-aN-DGR" id="sAH-NQ-Xwv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xyn-7y-Vra" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1841" y="458"/>
+            <point key="canvasLocation" x="2780" y="457.42128935532236"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ZBT-OB-8Gw">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="eNR-xF-WCw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yIK-m3-mSy">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="rcc-dn-ApV" kind="relationship" relationship="viewControllers" id="BAc-cb-X89"/>
+                        <segue destination="UUk-hc-cQk" kind="relationship" relationship="viewControllers" id="TrR-Je-LVJ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4B7-D8-RnG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="975.20000000000005" y="457.42128935532236"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="u6n-g5-ZsC"/>
+    </inferredMetricsTieBreakers>
 </document>

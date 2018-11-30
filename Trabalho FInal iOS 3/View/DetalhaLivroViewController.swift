@@ -9,11 +9,21 @@
 import UIKit
 
 class DetalhaLivroViewController: UIViewController {
+    
+    var livro : Livro!
 
+    @IBOutlet weak var nomeLivroLbl: UILabel!
+    @IBOutlet weak var autorLivroLbl: UILabel!
+    @IBOutlet weak var anoLivroLbl: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        nomeLivroLbl.text = livro.nome
+        autorLivroLbl.text = livro.autor
+        anoLivroLbl.text = livro.ano
     }
     
 
@@ -27,4 +37,7 @@ class DetalhaLivroViewController: UIViewController {
     }
     */
 
+    @IBAction func voltarButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
