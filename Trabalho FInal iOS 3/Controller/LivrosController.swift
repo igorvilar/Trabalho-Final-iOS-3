@@ -30,16 +30,11 @@ class LivrosController {
                     completion(false)
                     return
                 }
-                
-//                let postDict = response.value as? [String : AnyObject] ?? [:]
-//                var livrosLista = [Livro]()
-//                for key in postDict.keys{
-//                    NSLog("key = \(key)")
-//                    let novoLivro = Livro.init(nome: postDict[key]!["nome"] as! String, autor: postDict[key]!["autor"] as! String, ano: postDict[key]!["ano"] as! String)
-//                    livrosLista.append(novoLivro)
-//                }
+                let postDict = response.value as? [String : AnyObject] ?? [:]
+                let keyBook = postDict["name"] as! String 
+                print(keyBook)
+
                 completion(true)
-                return
         }
     }
     
