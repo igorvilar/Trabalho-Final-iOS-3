@@ -30,16 +30,21 @@ class CadastraLivroViewController: UIViewController {
         
         controller.salvarLivro(livro: livro,completion: {(sucesso) -> Void in
             if sucesso == true{
-                self.fecharCadastro()
+//                self.fecharCadastro()
+                self.nomeTextField.text = ""
+                self.autorTextField.text = ""
+                self.anoTextField.text = ""
+                
+                self.mostrarAlerta(title: "Alerta" , message: "Livro Cadastrado com Sucesso!")
             }
             
         })
     }
     
-    func fecharCadastro(){
-        // FECHAR FORMULÁRIO DE CADASTRO
-        self.performSegue(withIdentifier: "", sender: nil)
-    }
+//    func fecharCadastro(){
+//        // FECHAR FORMULÁRIO DE CADASTRO
+//        self.performSegue(withIdentifier: "", sender: nil)
+//    }
     
     func mostrarAlerta(title: String, message: String) {
         let alertaGuia = UIAlertController(title: title, message: message, preferredStyle: .alert)

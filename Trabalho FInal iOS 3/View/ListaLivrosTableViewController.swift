@@ -14,6 +14,18 @@ class ListaLivrosTableViewController: UITableViewController {
     
     var listaLivros : Array<Livro> = []
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        livrosController.buscarLivros(completion: {(livros) -> Void in
+            if(livros != nil){
+                self.listaLivros = livros!
+                self.tableView.reloadData()
+            }
+            
+        })
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,13 +37,13 @@ class ListaLivrosTableViewController: UITableViewController {
         
 
         
-        livrosController.buscarLivros(completion: {(livros) -> Void in
-            if(livros != nil){
-                self.listaLivros = livros!
-                self.tableView.reloadData()
-            }
-            
-        })
+//        livrosController.buscarLivros(completion: {(livros) -> Void in
+//            if(livros != nil){
+//                self.listaLivros = livros!
+//                self.tableView.reloadData()
+//            }
+//
+//        })
         
         
     }
