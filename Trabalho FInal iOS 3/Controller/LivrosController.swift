@@ -11,9 +11,9 @@ import Alamofire
 
 class LivrosController {
     
-    func salvarLivro(livro : Livro, completion: @escaping (Bool) -> Void){
+    func salvarLivro(livro : Livro, completion: @escaping (String) -> Void){
         guard let url = URL(string: "https://livros-ios3.firebaseio.com/livro.json") else {
-            completion(false)
+            completion("")
             return
         }
         
@@ -27,14 +27,43 @@ class LivrosController {
             .responseJSON { response in
                 guard response.result.isSuccess else {
                     print("Error while fetching remote rooms: /(String(describing: response.result.error))")
-                    completion(false)
+                    completion("")
                     return
                 }
                 let postDict = response.value as? [String : AnyObject] ?? [:]
                 let keyBook = postDict["name"] as! String 
                 print(keyBook)
 
-                completion(true)
+                completion(keyBook)
+        }
+    }
+    
+    func buscarLivro(name: String, completion: @escaping (Livro?) -> Void) {
+        guard let url = URL(string: "https://livros-ios3.firebaseio.com/livro/\(name).json") else {
+            completion(nil)
+            return
+        }
+        Alamofire.request(url,
+                          method: .get,
+                          parameters: nil)
+            .validate()
+            .responseJSON { response in
+                guard response.result.isSuccess else {
+                    print("Error while fetching remote rooms: /(String(describing: response.result.error))")
+                    completion(nil)
+                    return
+                }
+                
+                let postDict = response.result.value as? [String : AnyObject] ?? [:]
+                let livrosLista = Livro.init(id: name, nome: postDict["nome"] as! String, autor: postDict["autor"] as! String, ano: postDict["ano"] as! String)
+//                for key in postDict.keys{
+//                    //                    NSLog("key = \(key)")
+//                    let postDict = response.result.value as? [String : AnyObject] ?? [:]
+//                    let novoLivro = Livro.init(id: key, nome: postDict[key]!["nome"] as! String, autor: postDict[key]!["autor"] as! String, ano: postDict[key]!["ano"] as! String)
+//                    livrosLista = novoLivro
+//                }
+                completion(livrosLista)
+                return
         }
     }
     

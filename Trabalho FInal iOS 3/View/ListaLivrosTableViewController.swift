@@ -37,13 +37,13 @@ class ListaLivrosTableViewController: UITableViewController {
         
 
         
-//        livrosController.buscarLivros(completion: {(livros) -> Void in
-//            if(livros != nil){
-//                self.listaLivros = livros!
-//                self.tableView.reloadData()
-//            }
-//
-//        })
+        livrosController.buscarLivros(completion: {(livros) -> Void in
+            if(livros != nil){
+                self.listaLivros = livros!
+                self.tableView.reloadData()
+            }
+
+        })
         
         
     }

@@ -95,7 +95,7 @@
                         <outlet property="autorTextField" destination="27b-sH-GY8" id="rJ2-vz-p8W"/>
                         <outlet property="btnSalvar" destination="V0S-1q-i4A" id="ybH-kv-CKZ"/>
                         <outlet property="nomeTextField" destination="hU6-6O-xCu" id="A66-eU-GvU"/>
-                        <segue destination="9o8-Db-gRk" kind="show" id="u6n-g5-ZsC"/>
+                        <segue destination="9o8-Db-gRk" kind="show" identifier="detalheLivroSegue1" id="u6n-g5-ZsC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tDd-Z4-Fhu" userLabel="First Responder" sceneMemberID="firstResponder"/>
