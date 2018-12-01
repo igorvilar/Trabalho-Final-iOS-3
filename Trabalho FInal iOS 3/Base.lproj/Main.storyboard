@@ -191,13 +191,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORN-q8-4eG">
+                                <rect key="frame" x="45" y="300" width="122" height="36"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Excluir">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="excluirButton:" destination="9o8-Db-gRk" eventType="touchUpInside" id="maA-KA-Ztu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ht0-HV-fg3" firstAttribute="top" secondItem="5AJ-Yf-Zd2" secondAttribute="bottom" constant="34" id="4Y0-Iu-Auw"/>
+                            <constraint firstItem="ht0-HV-fg3" firstAttribute="leading" secondItem="ORN-q8-4eG" secondAttribute="trailing" constant="40" id="4bZ-bZ-l0h"/>
                             <constraint firstItem="Ovc-Hx-dd6" firstAttribute="trailing" secondItem="5AJ-Yf-Zd2" secondAttribute="trailing" constant="46" id="542-i4-MD4"/>
+                            <constraint firstItem="ORN-q8-4eG" firstAttribute="leading" secondItem="Ovc-Hx-dd6" secondAttribute="leading" constant="45" id="EkJ-NA-Aj0"/>
                             <constraint firstItem="6Ps-aN-DGR" firstAttribute="leading" secondItem="Ovc-Hx-dd6" secondAttribute="leading" constant="45" id="FtT-C4-Viw"/>
                             <constraint firstItem="Ovc-Hx-dd6" firstAttribute="trailing" secondItem="ATz-YY-LCW" secondAttribute="trailing" constant="46" id="Iwl-7o-fN9"/>
+                            <constraint firstItem="ORN-q8-4eG" firstAttribute="top" secondItem="5AJ-Yf-Zd2" secondAttribute="bottom" constant="34" id="LOZ-33-k3G"/>
                             <constraint firstItem="ATz-YY-LCW" firstAttribute="top" secondItem="Ovc-Hx-dd6" secondAttribute="top" constant="40" id="O50-O2-4ji"/>
                             <constraint firstItem="Gom-CJ-OxY" firstAttribute="top" secondItem="6Ps-aN-DGR" secondAttribute="bottom" constant="35" id="WlD-iw-NsU"/>
                             <constraint firstItem="6Ps-aN-DGR" firstAttribute="top" secondItem="ATz-YY-LCW" secondAttribute="bottom" constant="35" id="aCW-er-O2s"/>

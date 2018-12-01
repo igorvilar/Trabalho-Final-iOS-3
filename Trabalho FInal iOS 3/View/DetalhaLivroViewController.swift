@@ -11,6 +11,7 @@ import UIKit
 class DetalhaLivroViewController: UIViewController {
     
     var livro : Livro!
+    let controller = LivrosController()
 
     @IBOutlet weak var nomeLivroLbl: UILabel!
     @IBOutlet weak var autorLivroLbl: UILabel!
@@ -37,6 +38,15 @@ class DetalhaLivroViewController: UIViewController {
     }
     */
 
+    @IBAction func excluirButton(_ sender: Any) {
+        
+        controller.excluirLivro(livro: livro,completion: {(sucesso) -> Void in
+            if sucesso == true{
+                self.dismiss(animated: true, completion: nil)
+            }
+            
+        })
+    }
     @IBAction func voltarButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

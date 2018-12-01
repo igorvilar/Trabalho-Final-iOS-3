@@ -9,11 +9,13 @@
 import Foundation
 
 class Livro {
+    var id: String = ""
     var nome: String = ""
     var autor: String = ""
     var ano: String = ""
     
-    init(nome : String, autor: String, ano: String) {
+    init(id : String, nome : String, autor: String, ano: String) {
+        self.id = id
         self.nome = nome
         self.autor = autor
         self.ano = ano
