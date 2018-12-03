@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class CadastraLivroViewController: UIViewController {
     
@@ -28,7 +29,7 @@ class CadastraLivroViewController: UIViewController {
         livro.nome = nomeTextField.text!
         livro.autor = autorTextField.text!
         livro.ano = anoTextField.text!
-        
+        SVProgressHUD.show()
         controller.salvarLivro(livro: livro,completion: {(name) -> Void in
             if name != ""{
                 self.controller.buscarLivro(name: name, completion: {(livro) -> Void in
@@ -37,6 +38,7 @@ class CadastraLivroViewController: UIViewController {
                         self.nomeTextField.text = ""
                         self.autorTextField.text = ""
                         self.anoTextField.text = ""
+                        SVProgressHUD.dismiss()
                         self.performSegue(withIdentifier: "detalheLivroSegue1", sender: false)
                     }
                     

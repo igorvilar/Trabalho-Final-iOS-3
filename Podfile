@@ -7,6 +7,7 @@ target 'Trabalho FInal iOS 3' do
 
   # Pods for Trabalho FInal iOS 3
 	pod 'Alamofire', '~> 4.8.0'
+    pod 'SVProgressHUD'
 
 
 end

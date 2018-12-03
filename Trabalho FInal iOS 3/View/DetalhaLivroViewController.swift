@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class DetalhaLivroViewController: UIViewController {
     
@@ -39,8 +40,9 @@ class DetalhaLivroViewController: UIViewController {
     */
 
     @IBAction func excluirButton(_ sender: Any) {
-        
+        SVProgressHUD.show()
         controller.excluirLivro(livro: livro,completion: {(sucesso) -> Void in
+            SVProgressHUD.dismiss()
             if sucesso == true{
                 self.dismiss(animated: true, completion: nil)
             }

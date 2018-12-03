@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SVProgressHUD
+
 
 class ListaLivrosTableViewController: UITableViewController {
 
@@ -16,8 +18,9 @@ class ListaLivrosTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+        SVProgressHUD.show()
         livrosController.buscarLivros(completion: {(livros) -> Void in
+            SVProgressHUD.dismiss()
             if(livros != nil){
                 self.listaLivros = livros!
                 self.tableView.reloadData()
@@ -28,6 +31,8 @@ class ListaLivrosTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        SVProgressHUD.show()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -35,15 +40,6 @@ class ListaLivrosTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-
-        
-        livrosController.buscarLivros(completion: {(livros) -> Void in
-            if(livros != nil){
-                self.listaLivros = livros!
-                self.tableView.reloadData()
-            }
-
-        })
         
         
     }
