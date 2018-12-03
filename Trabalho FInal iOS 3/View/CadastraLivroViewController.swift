@@ -37,6 +37,7 @@ class CadastraLivroViewController: UIViewController {
                         self.nomeTextField.text = ""
                         self.autorTextField.text = ""
                         self.anoTextField.text = ""
+                        self.performSegue(withIdentifier: "detalheLivroSegue1", sender: false)
                     }
                     
                 })
