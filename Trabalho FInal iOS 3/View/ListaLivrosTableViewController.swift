@@ -60,11 +60,14 @@ class ListaLivrosTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LivroUiTableViewCell", for: indexPath) as! LivroUiTableViewCell
         
         cell.tag = indexPath.row
-        cell.lblNomeLivro.text = listaLivros[indexPath.row].nome
+        cell.lblNomeLivro.text = "Título: \(listaLivros[indexPath.row].nome)"
         
         return cell
     }
  
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
 
     /*
     // Override to support conditional editing of the table view.
